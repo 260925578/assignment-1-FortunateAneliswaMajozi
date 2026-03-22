@@ -13,41 +13,75 @@ Steps for installation and commands:
 •	Operating system: Ubuntu 24.04
 2.	I created a security group for instances.
 3.	I configured the k3s-agent instance using the following commands:
+4.	
 •	#Ssh into node
+
 ssh -i ~/.ssh/$k3s-agent.pem ubuntu@54.83.244.203 
+
 •	Install k3s
+
 curl -sfL https://get.k3s.io | sh –
+
 sudo kubectl get nodes
+
 sudo kubectl get pods –A
+
 •	Deployment 
+
              kubectl apply -f web-app.yml
+             
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
 kubectl get nodes
+
 #install helm
+
 Curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
 #Deploy nginx using Helm
+
 helm repo add bitnami https://charts.bitnami.com/bitnami
+
 helm repo update
+
 helm install my-nginx bitnami/nginx
-4.	I also configured the k3s-server instance using the same command I used in agent, the only difference is the key pair and public IP address:
+
+6.	I also configured the k3s-server instance using the same command I used in agent, the only difference is the key pair and public IP address:
 
 •	#Ssh into node
-ssh -i ~/.ssh/$k3s-server.pem ubuntu@ 98.87.165.223    
+
+ssh -i ~/.ssh/$k3s-server.pem ubuntu@ 98.87.165.223  
+
 •	Install k3s
+
 curl -sfL https://get.k3s.io | sh –
+
 sudo kubectl get nodes
+
 sudo kubectl get pods –A
+
 •	Deployment 
+
              kubectl apply -f web-app.yml
+             
 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
 kubectl get nodes
+
 #install helm
+
 Curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
 #Deploy nginx using helm
+
              helm repo add bitnami https://charts.bitnami.com/bitnami
+             
  helm repo update
+ 
  helm install my-nginx bitnami/nginx
 
 ##System requirements
@@ -76,18 +110,31 @@ Ingress and load balancing manage external access to applications. They route ex
 Storage in k3s uses supports persistent volumes and persistent volume claims, which allows applications to store data reliably even if containers restart.
 
 ##Evidence of Deployment
-! [Instance] (Screenshots/instances_agent&server.png)
-I [Instance] (Screenshots/majozi_EC2_instance_agent_ubuntu.png)
--[Instance] (Screenshots/majozi_EC2_instance_ubuntu.png)
+
+! [Instance] (screenshots/instances_agent&server.png)
+
+I [Instance] (screenshots/majozi_EC2_instance_agent_ubuntu.png)
+
+-[Instance] (screenshots/majozi_EC2_instance_ubuntu.png)
+
 ## Nodes
-/[Nodes] (Screenshots/Aneliswa_nodesAgent.png)
-1 [Nodes] (Screenshots/Aneliswa_nodesServer.png)
+
+/[Nodes] (screenshots/Aneliswa_nodesAgent.png)
+
+1 [Nodes] (screenshots/Aneliswa_nodesServer.png)
+
 # PODS
-[Pods] (Screenshots/Aneliswa_podsAgent.png)
-[Pods] (Screenshots/Aneliswa_podsServer.png)
+
+[Pods] (screenshots/Aneliswa_podsAgent.png)
+
+[Pods] (screenshots/Aneliswa_podsServer.png)
+
 # Deployment
-! [Deployment] (Screenshots/Aneliswa_agentDeployment.png)
-! [Deployemnt] (Screenshots/Aneliswa_serverDeployment.png)
+
+! [Deployment] (screenshots/Aneliswa_agentDeployment.png)
+
+! [Deployemnt] (screenshots/Aneliswa_serverDeployment.png)
+
 
 TECHNICAL REFLECTION
 What I learned:
