@@ -112,27 +112,22 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 ##Evidence of Deployment
 
 ![Instance](screenshots/instances_agent_server.png)
-
 ![Instance](screenshots/majozi_ec2_instance_agent_ubuntu.png)
-
 ![Instance](screenshots/majozi_ec2_instance_ubuntu.png)
 
 ## Nodes
 
 ![Nodes](screenshots/aneliswa_nodes_agent.png)
-
 ![Nodes](screenshots/aneliswa_nodes_server.png)
 
 # PODS
 
 ![Pods](screenshots/aneliswa_pods_agent.png)
-
 ![Pods](screenshots/aneliswa_pods_server.png)
 
 # Deployment
 
 ![Deployment](screenshots/aneliswa_agent_deployment.png)
-
 ![Deployemnt](screenshots/aneliswa_server_deployment.png)
 
 
