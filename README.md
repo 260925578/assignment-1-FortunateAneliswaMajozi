@@ -113,7 +113,7 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 
 ![Instance](screenshots/instances_agent_server.png)
 ![Instance](screenshots/majozi_ec2_instance_agent_ubuntu.png)
-![Instance](screenshots/majozi_ec2_instance_ubuntu.png)
+![Instance](screenshots/majozi_ec2_Instance_ubuntu.png)
 
 ## Nodes
 
