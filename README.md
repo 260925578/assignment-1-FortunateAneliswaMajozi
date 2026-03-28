@@ -6,13 +6,12 @@ Deploy a lightweight Kubernetes cluster (k3s) on AWS, document the deployment, d
 student number: 260925578
 name(s): Fortunate Aneliswa
 surname: Majozi
-
             
 ##System requirements
-Instance type: t3.large
-CPU: vCPUs(2)
-Disk: 50G
-RAM:7.6Gi
+|Instance type| t3.large|
+|CPU | vCPUs(2)|
+|Disk| 50G|
+|RAM|7.6Gi|
 
 ARCHITECTURE EXPLANATION
 What is K3s?
@@ -33,7 +32,7 @@ The CNI provides networking between pods and services inside the cluster. K3s us
 Ingress and load balancing manage external access to applications. They route external traffic to the correct services and enable exposure of the application to the internet. 
 Storage in k3s uses supports persistent volumes and persistent volume claims, which allows applications to store data reliably even if containers restart.
 
-##Evidence of Deployment
+##Instances
 
 ![Instance](screenshots/aneliswa-instances.png)
 
