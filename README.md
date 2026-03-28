@@ -56,7 +56,8 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 
 # Deployment
 
-![Deployment](screenshots/aneliswa_agent_deployment.PNG)
+![Deployment](screenshots/master1-deployment.png)
+![Deployment](screenshots/master3-deployment.png)
 
 ## TECHNICAL REFLECTION
 # What did i learn?
