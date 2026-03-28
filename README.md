@@ -37,6 +37,7 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 ## Instances
 
 ![Instance](screenshots/aneliswa-instances.png)
+![OperatingSystem](screenshots/operatingsystem.png)
 
 ## Nodes
 
