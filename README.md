@@ -7,83 +7,7 @@ student number: 260925578
 name(s): Fortunate Aneliswa
 surname: Majozi
 
-Steps for installation and commands:
-1.	I created 2 EC2 Instances and named them k3s-server and k3s-agent separately.
-•	Their instance type is t3.large
-•	Operating system: Ubuntu 24.04
-2.	I created a security group for instances.
-3.	I configured the k3s-agent instance using the following commands:
-4.	
-•	#Ssh into node
-
-ssh -i ~/.ssh/$k3s-agent.pem ubuntu@54.83.244.203 
-
-•	Install k3s
-
-curl -sfL https://get.k3s.io | sh –
-
-sudo kubectl get nodes
-
-sudo kubectl get pods –A
-
-•	Deployment 
-
-             kubectl apply -f web-app.yml
-             
-sudo chmod 644 /etc/rancher/k3s/k3s.yaml
-
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-
-kubectl get nodes
-
-#install helm
-
-Curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
-#Deploy nginx using Helm
-
-helm repo add bitnami https://charts.bitnami.com/bitnami
-
-helm repo update
-
-helm install my-nginx bitnami/nginx
-
-6.	I also configured the k3s-server instance using the same command I used in agent, the only difference is the key pair and public IP address:
-
-•	#Ssh into node
-
-ssh -i ~/.ssh/$k3s-server.pem ubuntu@ 98.87.165.223  
-
-•	Install k3s
-
-curl -sfL https://get.k3s.io | sh –
-
-sudo kubectl get nodes
-
-sudo kubectl get pods –A
-
-•	Deployment 
-
-             kubectl apply -f web-app.yml
-             
-sudo chmod 644 /etc/rancher/k3s/k3s.yaml
-
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
-
-kubectl get nodes
-
-#install helm
-
-Curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-
-#Deploy nginx using helm
-
-             helm repo add bitnami https://charts.bitnami.com/bitnami
-             
- helm repo update
- 
- helm install my-nginx bitnami/nginx
-
+            
 ##System requirements
 Instance type: t3.large
 CPU: vCPUs(2)
@@ -132,28 +56,13 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 
 
 TECHNICAL REFLECTION
-What I learned:
-This assignment gave me hands-on experience setting up a lightweight Kubernetes cluster on AWS with k3s. I became proficient in configuring an EC2 instance, a cloud-based Linux server.
-Using straightforward commands to install and maintain a Kubernetes distribution.
-deploying and managing apps, using tools like Helm and kubectl, and recognizing how a cluster's containers are coordinated.
 
-I was able to go beyond theory and comprehend how cloud native apps are actually implemented and maintained in real-world settings.
-Challenges I faced:
-One of the main challenges I encountered was permission errors, such as “permission denied: /etc/rancher/k3s/k3s.yaml”. I resolved this error by using  sudo and adjusting file permissions where necessary. I also faced connectivity issues with the cluster, which I fixed by ensuring the kubeconfig file was correctly exported and accessible. These challenges improved my troubleshooting skills and taught me how to read and interpret error messages effectively.
- How k3s relates to production Kubernetes / 5G cloud-native concepts
-Although K3s is a streamlined, lighter version of Kubernetes, it nevertheless makes use of the same fundamental ideas, including pods, services, deployments, and orchestration of containers
 
-Large-scale systems in production settings need complete Kubernetes, whereas k3s is best suited for computing on the edge, IoT settings, and systems with limited resources.
 
-K3s allows for the lightweight deployment of cloud-native apps at the edge, which is a fundamental concept in 5G designs. This is particularly pertinent to 5G networks, because services must operate closer to consumers (edge computing) to reduce latency.
 
-How virtualization and containerization enable scalable services
-By enabling several virtual machines (VMs) to operate on a single physical server, virtualization increases flexibility and resource efficiency.
 
-Containerization expands on this by packaging applications with all dependencies, maintaining uniformity in various settings, facilitating rapid deployment, and expansion
 
-Containers in Kubernetes (and K3s) can be scaled up or down depending on demand, they can be restarted if they don't work, and dispersed throughout several nodes. This increases the complexity of systems to be expandable, adaptable and effective.
-Highly scalable, cloud-native services are made possible by virtualization and containerization, which together form the basis of contemporary cloud computing.
+
 
 
 
