@@ -8,7 +8,7 @@ name(s): Fortunate Aneliswa
 surname: Majozi
             
 ##System requirements
-
+| ;-- | ;-- |
 | **Instance type** | t3.large|
 | **CPU** | vCPUs(2)|
 | **Disk** | 50G |
