@@ -7,7 +7,8 @@ student number: 260925578
 name(s): Fortunate Aneliswa
 surname: Majozi
             
-##System requirements
+## System requirements
+| Requirement | Master |
 | :--- | :--- |
 | **Instance type** | t3.large|
 | **CPU** | vCPUs(2)|
