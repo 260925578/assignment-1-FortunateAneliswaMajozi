@@ -43,7 +43,7 @@ Storage in k3s uses supports persistent volumes and persistent volume claims, wh
 
 ![Nodes](screenshots/aneliswa-nodes-master2.png)
 
-![Nodes](screenshots/aneliswa-nodes-master3.png)
+![Nodes](screenshots/aneliswa-nodesmaster3.png)
 
 # PODS
 
